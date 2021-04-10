@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Geop Quiz</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="opening" id="opening">
+            <h1>/* Canda Quiz */</h1>
+            <button onclick="startQuiz()">Mulai</button>
+        </div>
+
+        <div class="hidden" id="quiz">
+            <div class="card-question">
+                <h1 id="question" class="question"></h1>
+        
+                <div class="option">
+        
+                    <label for="choice0">
+                        <input type="radio" name="choices" id="choice0" data-id="0">
+                        <span id="choiceText0"></span>
+                    </label>
+            
+                    <label for="choice1">
+                        <input type="radio" name="choices" id="choice1" data-id="1">
+                        <span id="choiceText1"></span>
+                    </label>
+                    
+                    <label for="choice2">
+                        <input type="radio" name="choices" id="choice2" data-id="2">
+                        <span id="choiceText2"></span>
+                    </label>
+                    
+                    <label for="choice3">
+                        <input type="radio" name="choices" id="choice3" data-id="3">
+                        <span id="choiceText3"></span>
+                    </label>
+                    
+                </div>
+
+                <button class="btn-next" onclick="nextQuestion()">Selanjutnya</button>
+            </div>
+    
+        </div>
+
+        <div class="closing hidden" id="closing">
+            <h1>/* Selesai */</h1>
+            <h2 id="score"></h2>
+            
+            <button onclick="javascript:location.reload(true)">Main lagi</button>
+        </div>
+
+    </div>
+
+    <script src="db-quiz.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
